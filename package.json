@@ -1,0 +1,14 @@
+{
+  "name": "profile",
+  "version": "1.0.0",
+  "description": "my profile app",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app"
+  },
+  "author": "Franklin frank",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
