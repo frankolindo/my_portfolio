@@ -1,0 +1,137 @@
+body{
+    background-color:rgba(0, 0, 0, 0.3);
+    overflow:hidden;
+}
+.icon{
+    width:22px; 
+    height:4px;
+    background-color:#000;
+    margin-top:3px;
+    border-radius:15px;
+}
+.header{
+    position:absolute;
+    right:30px;
+    top:20px;
+    z-index: 99;
+}
+.links{
+    position:absolute;
+    top:20%;
+    right:2%;
+    transform:translate(-50%, -50%);
+    display:flex;
+    flex-direction: column;
+}
+.links > div:hover{
+    color:#fff;
+}
+.links > div{
+    /* flex-basis: 50px; */
+    font-size:15px;
+    padding:1em;
+    font-family:tahoma;
+    color:#000;
+}
+.circle{
+    position: absolute;
+    top:20%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width:150px;
+    height:150px;
+    border:4px solid rgb(0,0,0,0.2);
+    border-radius: 50%;
+    box-shadow:-4px -5px 4px  rgb(29, 27, 27);
+}
+.circle > img{
+    width:150px;
+    height:150px;
+    border-radius: 50%;
+}
+.circle::after{
+    content: '';
+    position:absolute;
+    top:-9%;
+    left:-9%;
+    width:170px;
+    height:170px;
+    border:4px solid rgb(119, 118, 51);
+    border-radius:50%;
+}
+.rapper{
+    position:absolute;
+    top:70%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    display:flex;
+    flex-direction: column;
+    justify-content:space-between;
+}
+.rapper > div{
+    background-color:rgba(210, 216, 214, 0.945);
+    padding:1em;
+    margin:2px;
+    border-radius:10px;
+    /* transform: rotate(4deg) */
+}
+.rapper1{
+    position:absolute;
+    top:70%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    display:flex;
+    flex-direction: column;
+    justify-content:space-between;
+}
+.rapper1 > div{
+    background-color:rgba(210, 216, 214, 0.945);
+    padding:1em;
+    margin:2px;
+    border-radius:10px;
+    /* transform: rotate(4deg) */
+}
+#hardCover{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+@keyframes book{
+    from{transform: rotateY(0deg)}
+    to{transform: rotateY(180deg); color:transparent}
+}
+@media(min-width: 992px){
+    .rapper{
+        position:absolute;
+        top:60%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        display:flex;
+        flex-direction: row;
+        z-index:90;
+       
+    }
+    .rapper > div{
+        padding:2em;
+    }
+    #sideCover{
+        transform-origin: left;
+        animation:book 2s 3s ease 4 forwards;
+    }
+    /*This is the fixed book*/
+    .rapper1{
+        position:absolute;
+        top:60%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        display:flex;
+        flex-direction: row;
+        z-index:89;
+       
+    }
+    .rapper1 > div{
+        padding:2em;
+    }
+    #sideCover1{
+        transform-origin: left;
+        /* animation:book 3s ease 1 forwards; */
+    }
+}
